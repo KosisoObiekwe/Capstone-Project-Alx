@@ -1,0 +1,104 @@
+.footer {
+    background-color: #000000;
+    padding: 40px 80px;
+    text-align: center;
+    margin-top: 60px;
+    /* spacing under content */
+    width: 100%;
+    /* ensure full width */
+    box-sizing: border-box;
+    /* include padding in width */
+}
+
+.footer-container {
+    max-width: 1200px;
+    /* or whatever your landing page uses */
+    margin: 0 auto;
+}
+
+.landing-container .footer {
+    background-color: #000000;
+    padding: 40px 80px;
+    text-align: center;
+    margin-top: -100px;
+}
+
+.converter-page .footer {
+    background-color: #000000;
+    padding: 40px 80px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.footer-container h2 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.footer-container p {
+    font-size: 16px;
+    color: #ffffff;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.footer-container .powered-by {
+    font-size: 14px;
+    color: #9ca3af;
+    margin-top: 20px;
+}
+
+/* SUBSCRIBE SECTION */
+.subscribe-section {
+    margin: 40px 0;
+    text-align: center;
+}
+
+.subscribe-section h3 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.subscribe-form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.subscribe-input {
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    width: 300px;
+    outline: none;
+}
+
+.subscribe-btn {
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+/* Optional hover */
+.subscribe-btn:hover {
+    background-color: #e5e7eb;
+    /* light gray hover effect */
+}
+
+.subscribe-note {
+    font-size: 14px;
+    color: #6b7280;
+    line-height: 1.4;
+    max-width: 400px;
+    margin: 0 auto;
+}

@@ -10,6 +10,8 @@
 }
 
 
+/* //All break points (375, 480, 600, 768)// */
+
 /* MOBILE STYLES */
 @media (max-width: 768px) {
 
@@ -320,6 +322,7 @@
     }
 
     /* ---------------- FOOTER ---------------- */
+
     .footer-container h2 {
         font-size: 20px;
     }
@@ -390,5 +393,3 @@
 .footer .powered-by {
     font-size: 10px;
 }
-
-/* //All break points (375, 480, 600, 768)// */

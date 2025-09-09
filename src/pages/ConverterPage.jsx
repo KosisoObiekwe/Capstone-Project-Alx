@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { FiRefreshCw, FiCalendar, FiBell } from 'react-icons/fi';
 import './ConverterPage.css';
 import Footer from "../components/Footer";
+import AmountInput from "../components/AmountInput";
+import CurrencySelector from "../components/CurrencySelector";
+import ConversionResult from "../components/ConversionResult";
 
 export default function ConverterPage() {
     const [amount, setAmount] = useState(1);
@@ -95,41 +98,37 @@ export default function ConverterPage() {
                 <div className="converter-card">
                     <h2>Convert Currency</h2>
 
-                    <label>Amount</label>
-                    <input
-                        type="number"
-                        value={amount}
-                        onChange={(e) => setAmount(e.target.value)}
-                        placeholder="Enter amount"
-                    />
+                    <AmountInput amount={amount} setAmount={setAmount} />
 
                     <div className="currency-row">
-                        <div className="currency-select">
-                            <label>From</label>
-                            <select value={fromCurrency} onChange={(e) => setFromCurrency(e.target.value)}>
-                                {currencies.map(c => <option key={c} value={c}>{c} - {descriptions[c]}</option>)}
-                            </select>
-                        </div>
+                        <CurrencySelector
+                            label="From"
+                            value={fromCurrency}
+                            onChange={setFromCurrency}
+                            currencies={currencies}
+                            descriptions={descriptions}
+                        />
 
                         <button className="swap-button" onClick={swapCurrencies}><FiRefreshCw /></button>
 
-                        <div className="currency-select">
-                            <label>To</label>
-                            <select value={toCurrency} onChange={(e) => setToCurrency(e.target.value)}>
-                                {currencies.map(c => <option key={c} value={c}>{c} - {descriptions[c]}</option>)}
-                            </select>
-                        </div>
+                        <CurrencySelector
+                            label="To"
+                            value={toCurrency}
+                            onChange={setToCurrency}
+                            currencies={currencies}
+                            descriptions={descriptions}
+                        />
                     </div>
 
-                    <div className="result-section">
-                        {isLoading ? <p>Loading...</p> : (
-                            <>
-                                <p className="converted">{formatCurrency(convertedAmount, toCurrency)}</p>
-                                <p className="rate">1 {fromCurrency} = {exchangeRate.toFixed(6)} {toCurrency}</p>
-                                <p className="last-updated">Last updated: {lastUpdated}</p>
-                            </>
-                        )}
-                    </div>
+                    <ConversionResult
+                        isLoading={isLoading}
+                        convertedAmount={convertedAmount}
+                        fromCurrency={fromCurrency}
+                        toCurrency={toCurrency}
+                        exchangeRate={exchangeRate}
+                        lastUpdated={lastUpdated}
+                        formatCurrency={formatCurrency}
+                    />
                 </div>
 
                 {/* Side Panel */}

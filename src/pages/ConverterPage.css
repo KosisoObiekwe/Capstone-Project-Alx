@@ -114,3 +114,15 @@
     border-radius: 6px;
     cursor: pointer;
 }
+
+.extra-buttons .calender-btn {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #000000;
+    color: #6ff94e;
+}
+
+.extra-buttons .bell-btn {
+    background-color: #000000;
+    color: #6ff94e;
+}

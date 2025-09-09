@@ -139,8 +139,8 @@ export default function ConverterPage() {
                     <button className="print-button" onClick={handlePrint}>Print</button>
 
                     <div className="extra-buttons">
-                        <button><FiCalendar /> View Historical Rates</button>
-                        <button><FiBell /> Set Rate Alert</button>
+                        <button className='calender-btn'><FiCalendar /> View Historical Rates</button>
+                        <button className='bell-btn'><FiBell /> Set Rate Alert</button>
                     </div>
                 </aside>
             </div>
